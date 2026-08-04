@@ -1,28 +1,64 @@
-import { Briefcase, Code, User } from "lucide-react";
+import { Code, Smartphone, Server, Brain } from "lucide-react";
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="py-16 sm:py-24 px-4 relative">
-      {" "}
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center">
-          About <span className="text-cosmic"> Me</span>
-        </h2>
+    <section
+      id="about"
+      className="section-padding relative"
+      style={{ background: "var(--bg-primary)" }}
+    >
+      <div className="container">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Photo + Stats */}
+          <div className="relative">
+            <div
+              className="rounded-2xl overflow-hidden"
+              style={{
+                border: "1px solid var(--border-subtle)",
+                background: "var(--bg-secondary)",
+              }}
+            >
+              <img
+                src="/KKH.jpg"
+                alt="Kaung Khant Hein"
+                className="w-full h-80 md:h-[420px] object-cover"
+              />
+            </div>
+            {/* Experience badge */}
+            <div
+              className="absolute -bottom-6 -right-4 md:right-8 p-5 rounded-xl"
+              style={{
+                background: "var(--accent-primary)",
+                boxShadow: "0 12px 40px rgba(79, 70, 229, 0.3)",
+              }}
+            >
+              <div className="text-3xl font-bold text-foreground">2+</div>
+              <div className="text-sm font-medium text-foreground/80">Years of Experience</div>
+            </div>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
-          <div className="space-y-4 sm:space-y-6">
-            <h3 className="text-xl sm:text-2xl font-semibold text-glow mb-3 sm:mb-4">
-              Full‑Stack Mobile & Web Engineer — Product-minded
-            </h3>
+          {/* Content */}
+          <div className="space-y-6">
+            <div>
+              <p
+                className="text-sm font-semibold tracking-widest uppercase mb-3"
+                style={{ color: "var(--accent-primary)" }}
+              >
+                About Me
+              </p>
+              <h2 className="section-heading text-left">
+                Full-Stack Mobile & Web Engineer
+              </h2>
+            </div>
 
-            <p className="text-muted-foreground">
+            <p style={{ color: "var(--text-secondary)", lineHeight: 1.8 }}>
               I build production-ready web and mobile applications with a focus on
               performance, localization, and maintainable architecture. My
               experience spans React, React Native (CLI & Expo), TypeScript,
               Tailwind CSS, Go backends, and Medusa.js e-commerce platforms.
             </p>
 
-            <p className="text-muted-foreground">
+            <p style={{ color: "var(--text-secondary)", lineHeight: 1.8 }}>
               I deliver end-to-end features: ERD-backed API design, atomic UI,
               multi-tenant backend patterns, offline-first local storage
               (MMKV), push notifications (FCM / Notifee), and multilingual
@@ -30,67 +66,36 @@ export const AboutSection = () => {
               AI-assisted workflows to accelerate design-to-code delivery.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 items-center justify-center">
-              <a href="#contact" className="cosmic-button">
-                {" "}
+            <div className="grid grid-cols-2 gap-4 pt-2">
+              {[
+                { icon: Smartphone, label: "Mobile & Native" },
+                { icon: Code, label: "Frontend & UI" },
+                { icon: Server, label: "Backend & APIs" },
+                { icon: Brain, label: "Architecture & AI" },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-3 p-3 rounded-lg transition-colors duration-200"
+                  style={{
+                    background: "var(--bg-secondary)",
+                    border: "1px solid var(--border-subtle)",
+                  }}
+                >
+                  <item.icon size={18} style={{ color: "var(--accent-primary)" }} />
+                  <span className="text-sm font-medium" style={{ color: "var(--text-secondary)" }}>
+                    {item.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3 pt-4">
+              <a href="#contact" className="btn-primary">
                 Get In Touch
               </a>
-
-              <a
-                href="/kkh_cv.pdf"
-                download="kkh_cv.pdf"
-                className="px-6 py-3 rounded-full neon-border text-cosmic hover:text-glow transition-all duration-300 font-medium"
-              >
+              <a href="/kkh_cv.pdf" download="kkh_cv.pdf" className="btn-outline">
                 Download CV
               </a>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 gap-4 sm:gap-6">
-            <div className="glassmorphism-card neon-border">
-              <div className="flex items-start gap-3 sm:gap-4">
-                <div className="p-2.5 sm:p-3 rounded-full glassmorphism">
-                  <Code className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-base sm:text-lg text-cosmic">Mobile & Native</h4>
-                  <p className="text-muted-foreground text-sm sm:text-base">
-                    React Native (CLI & Expo), TypeScript, MMKV local storage,
-                    push notifications (FCM / Notifee), and mobile-first UX.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="glassmorphism-card neon-border">
-              <div className="flex items-start gap-3 sm:gap-4">
-                <div className="p-2.5 sm:p-3 rounded-full glassmorphism">
-                  <User className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-base sm:text-lg text-cosmic">Full‑Stack & Backend</h4>
-                  <p className="text-muted-foreground text-sm sm:text-base">
-                    Go REST APIs, Medusa.js, Node.js, PostgreSQL, Docker, and
-                    token-based authentication for scalable backends.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="glassmorphism-card neon-border">
-              <div className="flex items-start gap-3 sm:gap-4">
-                <div className="p-2.5 sm:p-3 rounded-full glassmorphism">
-                  <Briefcase className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
-                </div>
-
-                <div className="text-left">
-                  <h4 className="font-semibold text-base sm:text-lg text-cosmic">Architecture & AI</h4>
-                  <p className="text-muted-foreground text-sm sm:text-base">
-                    ERD design, Atomic UI, MVP scoping and AI-assisted SDLC
-                    workflows (MCP integration, design-to-code acceleration).
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>

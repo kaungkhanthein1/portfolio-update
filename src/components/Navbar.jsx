@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const navItems = [
   { name: "Home", href: "#hero" },
@@ -11,81 +11,82 @@ const navItems = [
 ];
 
 export const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
   return (
     <nav
-      className={cn(
-        "fixed w-full z-40",
-        isMenuOpen ? "transition-none" : "transition-all duration-500",
-        isScrolled && !isMenuOpen
-          ? "py-2 glassmorphism border-b border-white/10 shadow-[0_8px_32px_rgba(31,38,135,0.37)]" 
-          : "py-2 bg-transparent"
-      )}
+      className="sticky top-0 z-[100]"
+      style={{
+        backdropFilter: "blur(12px)",
+        WebkitBackdropFilter: "blur(12px)",
+        borderBottom: "1px solid var(--border-subtle)",
+        background: "rgba(14, 14, 16, 0.85)",
+      }}
     >
-      <div className="container flex items-center justify-between">
+      <div className="container flex items-center justify-between h-16">
         <a
-          className="text-xl font-bold flex items-center"
+          className="text-lg font-bold tracking-tight text-foreground hover:opacity-80 transition-opacity"
           href="#hero"
         >
-          <span className="relative z-10">
-            <span className="text-cosmic font-bold"> KaungKhant&apos;s </span>
-            <span className="text-glow ml-1">Portfolio</span>
-          </span>
+          KKH<span className="text-primary">.</span>
         </a>
 
-        {/* desktop nav */}
-        <div className="hidden md:flex space-x-8">
+        {/* Desktop nav */}
+        <div className="hidden md:flex items-center gap-8">
           {navItems.map((item, key) => (
             <a
               key={key}
               href={item.href}
-              className="text-foreground/80 hover:text-cosmic hover:text-glow transition-all duration-300 px-3 py-2 rounded-lg hover:bg-white/5"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
             >
               {item.name}
             </a>
           ))}
+          <a href="#contact" className="btn-primary text-sm">
+            Contact Me
+          </a>
         </div>
 
-        {/* mobile nav */}
-
+        {/* Mobile hamburger */}
         <button
           onClick={() => setIsMenuOpen((prev) => !prev)}
           className="md:hidden p-2 text-foreground z-50"
           aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
+          {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
 
+        {/* Mobile menu */}
         <div
           className={cn(
-            "fixed inset-0 glassmorphism z-40 flex flex-col items-center justify-center",
-            "transition-all duration-500 md:hidden",
+            "fixed inset-0 z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden",
             isMenuOpen
-              ? "opacity-100 pointer-events-auto backdrop-blur-lg"
-              : "opacity-0 pointer-events-none backdrop-blur-none"
+              ? "opacity-100 pointer-events-auto"
+              : "opacity-0 pointer-events-none"
           )}
+          style={{
+            background: "rgba(14, 14, 16, 0.98)",
+            backdropFilter: "blur(20px)",
+          }}
         >
-          <div className="flex flex-col space-y-8 text-xl">
+          <div className="flex flex-col items-center gap-8 text-xl">
             {navItems.map((item, key) => (
               <a
                 key={key}
                 href={item.href}
-                className="text-foreground/80 hover:text-cosmic hover:text-glow transition-all duration-300 px-6 py-3 rounded-lg hover:glassmorphism-card"
+                className="text-foreground/80 hover:text-foreground transition-colors duration-200 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </a>
             ))}
+            <a
+              href="#contact"
+              className="btn-primary mt-4"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact Me
+            </a>
           </div>
         </div>
       </div>

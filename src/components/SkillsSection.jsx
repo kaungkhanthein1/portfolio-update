@@ -76,56 +76,80 @@ export const SkillsSection = () => {
   );
 
   return (
-    <section id="skills" className="py-12 px-4 relative bg-secondary/30">
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">
-          My <span className="text-cosmic"> Skills</span>
-        </h2>
+    <section
+      id="skills"
+      className="section-padding relative"
+      style={{ background: "var(--bg-secondary)" }}
+    >
+      <div className="container">
+        <div className="text-center mb-12">
+          <p
+            className="text-sm font-semibold tracking-widest uppercase mb-3"
+            style={{ color: "var(--accent-primary)" }}
+          >
+            My Skills
+          </p>
+          <h2 className="section-heading">
+            Technologies & Tools
+          </h2>
+          <p className="section-subtitle mt-4">
+            A curated set of technologies I use to build high-quality products
+          </p>
+        </div>
 
         {/* Category filter */}
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-10">
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
           {categories.map((category, key) => (
             <button
               key={key}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "px-3 py-1.5 sm:px-4 sm:py-2 rounded-full transition-all duration-300 capitalize font-medium text-xs sm:text-sm",
+                "px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 capitalize",
                 activeCategory === category
-                  ? "cosmic-button text-glow"
-                  : "glassmorphism text-foreground/80 hover:text-cosmic hover:border-primary/70"
+                  ? "text-foreground"
+                  : "hover:border-border-hover"
               )}
+              style={{
+                background: activeCategory === category ? "var(--accent-primary)" : "var(--bg-primary)",
+                border: `1px solid ${activeCategory === category ? "var(--accent-primary)" : "var(--border-subtle)"}`,
+                color: activeCategory === category ? "white" : "var(--text-secondary)",
+              }}
             >
               {category}
             </button>
           ))}
         </div>
 
-        {/* Skills grid — compact cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3">
+        {/* Skills grid */}
+        <div className="card-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))" }}>
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="glassmorphism neon-border rounded-xl px-2.5 py-2.5 sm:px-3 sm:py-3 transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:shadow-[0_8px_32px_rgba(31,38,135,0.37)]"
+              className="p-4 rounded-xl card-base card-base-hover"
             >
-              {/* Skill name */}
-              <h3 className="font-medium text-xs text-cosmic leading-snug mb-2 line-clamp-2 min-h-[2.5rem]">
+              <h3
+                className="font-medium text-sm leading-snug mb-3 line-clamp-2"
+                style={{ color: "var(--text-primary)" }}
+              >
                 {skill.name}
               </h3>
-
-              {/* Progress bar + percentage inline */}
               <div className="flex items-center gap-2">
-                <div className="flex-1 bg-white/10 h-1.5 rounded-full overflow-hidden border border-white/10">
+                <div
+                  className="flex-1 h-1.5 rounded-full overflow-hidden"
+                  style={{ background: "var(--bg-card-hover)" }}
+                >
                   <div
-                    className="h-full rounded-full animate-[grow_1s_ease-out]"
+                    className="h-full rounded-full transition-all duration-700"
                     style={{
                       width: skill.level + "%",
-                      background:
-                        "linear-gradient(90deg, hsl(var(--cosmic-purple)) 0%, hsl(var(--cosmic-blue)) 100%)",
-                      boxShadow: "0 0 4px rgba(167, 139, 250, 0.4)",
+                      background: "var(--accent-primary)",
                     }}
                   />
                 </div>
-                <span className="text-[10px] text-muted-foreground shrink-0 font-medium">
+                <span
+                  className="text-xs font-medium shrink-0"
+                  style={{ color: "var(--text-muted)" }}
+                >
                   {skill.level}%
                 </span>
               </div>
