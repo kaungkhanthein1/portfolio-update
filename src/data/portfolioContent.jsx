@@ -77,11 +77,11 @@ export const projects = [
     href: "https://github.com/kaungkhanthein1/zawgyi-mythic-run",
   },
   {
-    title: "Techzy",
+    title: "AppleThings",
     role: "Full-stack e-commerce app",
     description:
       "An end-to-end mobile commerce platform built with an AI-powered SDLC. It includes push notifications, persistent wishlists with MMKV, Myanmar and English i18n, and dark/light theming powered by Medusa.js.",
-    image: "/projects/TechzyBanner.jpg",
+    image: "/projects/AppleThingsBanner.jpg",
     tags: ["React Native", "Medusa.js", "PostgreSQL", "Docker"],
     categories: [
       { label: "React Native", color: "blue" },

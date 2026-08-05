@@ -316,12 +316,12 @@ export const Home = () => {
                 </div>
 
                 <ProjectCard project={pageCards[0]} />
-                {pageCards[2] && <ProjectCard project={pageCards[2]} />}
+                {pageCards[3] && <ProjectCard project={pageCards[3]} />}
               </div>
 
               <div className="portfolio-col-right">
                 {pageCards[1] && <ProjectCard project={pageCards[1]} />}
-                {pageCards[3] && <ProjectCard project={pageCards[3]} />}
+                {pageCards[2] && <ProjectCard project={pageCards[2]} />}
                 {pageCards[4] && <ProjectCard project={pageCards[4]} />}
               </div>
             </div>

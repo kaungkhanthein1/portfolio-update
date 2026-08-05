@@ -31,17 +31,6 @@ const projects = [
     description: "A 2D/3D side-scrolling multiplayer game featuring a Myanmar alchemist with Levitate, Staff Strike, and Alchemic Pill abilities.",
   },
   {
-    id: 2,
-    title: "Techzy — Full-Stack E-Commerce App",
-    brand: { name: "Techzy", description: "Full-stack e-commerce app", icon: <Code size={20} /> },
-    image: "/projects/TechzyBanner.jpg",
-    tags: ["React Native", "TypeScript", "Medusa.js", "PostgreSQL"],
-    categories: ["React Native", "Medusa.js"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/kaungkhanthein1/techzy",
-    description: "An end-to-end mobile e-commerce platform built with an AI-powered SDLC.",
-  },
-  {
     id: 4,
     title: "Veteran Tour Guide App",
     brand: { name: "Veteran", description: "Tourist experience platform", icon: <Map size={20} /> },
@@ -52,6 +41,18 @@ const projects = [
     githubUrl: "https://github.com/kaungkhanthein1/veteran-driver-v1",
     description: "A multilingual Southeast Asia tourists web app.",
   },
+  {
+    id: 2,
+    title: "AppleThings — Full-Stack E-Commerce App",
+    brand: { name: "AppleThings", description: "Full-stack e-commerce app", icon: <Code size={20} /> },
+    image: "/projects/AppleThingsBanner.jpg",
+    tags: ["React Native", "TypeScript", "Medusa.js", "PostgreSQL"],
+    categories: ["React Native", "Medusa.js"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/kaungkhanthein1/techzy",
+    description: "An end-to-end mobile e-commerce platform built with an AI-powered SDLC.",
+  },
+  
   {
     id: 5,
     title: "Personal Developer Portfolio",
