@@ -360,8 +360,8 @@ export const Home = () => {
             <SectionTitle
               align="center"
               eyebrow="Details"
-              title="The portfolio also comes with more surprises..."
-              subtitle="These blocks preserve the long-form storytelling rhythm of the reference while using your own work history."
+              title="Built with intent. Scaled with precision."
+              subtitle="The systems, architecture, and engineering principles behind every project I deliver."
             />
 
             <div className="surprise-grid">
@@ -407,7 +407,7 @@ export const Home = () => {
         <div className="container-default">
           <div className="footer-top">
             <div className="footer-brand">
-              <img src="/KKH.jpg" alt="Kaung Khant Hein" className="footer-avatar" />
+              <img src="/public/portrait.jpg" alt="Kaung Khant Hein" className="footer-avatar" />
               <div>
                 <h3>Kaung Khant Hein</h3>
                 <p>Full-Stack Mobile & Web Engineer</p>
@@ -482,10 +482,13 @@ export const Home = () => {
           }}
         >
           <div className="more-templates-badge">
-            <div className="more-templates-badge-icon">KKH</div>
+            <div className="badge-pulse-ring" />
+            <div className="more-templates-badge-icon">
+              <img src="/collab-icon.png" alt="Portfolio" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "inherit" }} />
+            </div>
             <div>
-              <p>Need a custom portfolio?</p>
-              <span>Let me tailor the UI to your projects</span>
+              <p>Have a product in mind?</p>
+              <span>Let's bring it to life.</span>
             </div>
           </div>
         </a>

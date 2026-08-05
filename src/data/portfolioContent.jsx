@@ -143,22 +143,22 @@ export const surpriseBlocks = [
   {
     title: "What I optimize for",
     body:
-      "Performance, maintainability, and localization. I prefer clean component boundaries, predictable data flow, and UI that feels deliberate on both desktop and mobile.",
+      "High performance, offline-first reliability, and seamless localization. I build clean component architectures, predictable state management, and responsive UI systems that feel effortless on mobile and web.",
   },
   {
     title: "How I ship",
     body:
-      "I move from analysis to implementation with a practical workflow: scope the architecture, design the UI, connect the data, and validate the result on real devices.",
+      "End-to-end execution with spec-driven precision. I turn ideas into code through ERD-backed API design, clean frontend implementation, push notification setups, and rigorous testing on real devices.",
   },
   {
     title: "What I can take on",
     body:
-      "Product landing pages, mobile commerce, multilingual applications, backend APIs, admin tools, and portfolio-grade frontends that need strong visual presentation.",
+      "Multi-tenant web platforms, cross-platform mobile apps (React Native/Expo), e-commerce engines, Node.js backend services, and admin dashboards with multilingual support.",
   },
   {
     title: "Working style",
     body:
-      "I keep the codebase organized, prefer reusable patterns, and use AI-assisted tooling where it speeds up delivery without lowering the standard of the final result.",
+      "Pragmatic and delivery-focused. I utilize structured component patterns, efficient state management (MMKV, local caching), and AI-assisted tooling to speed up shipping without compromising quality.",
   },
 ];
 
