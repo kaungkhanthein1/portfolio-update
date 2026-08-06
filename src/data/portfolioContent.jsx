@@ -74,7 +74,7 @@ export const projects = [
       { label: "Babylon.js", color: "gray" },
     ],
     icon: <Swords size={24} />,
-    href: "https://github.com/kaungkhanthein1/zawgyi-mythic-run",
+    href: "https://zawgyigame.onrender.com/",
   },
   {
     title: "AppleThings",

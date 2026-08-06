@@ -27,7 +27,7 @@ const projects = [
     tags: ["Phaser 3", "Babylon.js", "Socket.IO", "Node.js"],
     categories: ["Phaser 3", "Babylon.js"],
     demoUrl: "#",
-    githubUrl: "https://github.com/kaungkhanthein1/zawgyi-mythic-run",
+    githubUrl: "https://zawgyigame.onrender.com/",
     description: "A 2D/3D side-scrolling multiplayer game featuring a Myanmar alchemist with Levitate, Staff Strike, and Alchemic Pill abilities.",
   },
   {
