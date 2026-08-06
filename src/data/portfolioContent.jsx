@@ -102,7 +102,7 @@ export const projects = [
       { label: "Redux Toolkit", color: "gray" },
     ],
     icon: <Map size={24} />,
-    href: "https://vd-demo-11.netlify.app/",
+    href: "https://veteran-driver.netlify.app/",
   },
   {
     title: "Personal Developer Portfolio",
