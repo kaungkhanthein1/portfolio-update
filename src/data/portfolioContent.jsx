@@ -54,6 +54,7 @@ export const projects = [
     description:
       "A white-label quick service restaurant platform built for scalability across multiple restaurant brands. It combines a multi-tenant Go API, brand-specific theming, and a React Native Expo app for cross-brand ordering.",
     image: "/projects/NextBiteBanner.jpg",
+    lightImage: "/projects/NextBiteBanenrWhite.jpg",
     tags: ["Go", "React Native", "Expo", "TypeScript"],
     categories: [
       { label: "Go", color: "gray" },
@@ -68,6 +69,7 @@ export const projects = [
     description:
       "A 2D and 3D side-scrolling multiplayer game featuring a Myanmar alchemist, 5 game modes, smartphone gamepads via QR, and real-time gameplay input relayed through Socket.IO.",
     image: "/projects/ZawgyiBanner.png",
+    lightImage: "/projects/ZawgyiBannerWhite.jpg",
     tags: ["Phaser 3", "Babylon.js", "Socket.IO", "Node.js"],
     categories: [
       { label: "Phaser 3", color: "gray" },
@@ -82,6 +84,7 @@ export const projects = [
     description:
       "An end-to-end mobile commerce platform built with an AI-powered SDLC. It includes push notifications, persistent wishlists with MMKV, Myanmar and English i18n, and dark/light theming powered by Medusa.js.",
     image: "/projects/AppleThingsBanner.jpg",
+    lightImage: "/projects/AppleThingsBannerWhite.jpg",
     tags: ["React Native", "Medusa.js", "PostgreSQL", "Docker"],
     categories: [
       { label: "React Native", color: "blue" },
@@ -96,6 +99,7 @@ export const projects = [
     description:
       "A multilingual Southeast Asia tourists web app with token-based authentication, global state via Zustand, dynamic language switching, and reusable custom components.",
     image: "/projects/VeteranBanner.png",
+    lightImage: "/projects/VeteranBannerWhite.jpg",
     tags: ["React", "Redux Toolkit", "TailwindCSS", "i18next"],
     categories: [
       { label: "React", color: "gray" },

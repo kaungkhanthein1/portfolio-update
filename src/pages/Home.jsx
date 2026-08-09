@@ -7,6 +7,7 @@ import {
   Menu,
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
+import { ThemeToggle } from "../components/ThemeToggle";
 import {
   aboutIntro,
   capabilityCards,
@@ -62,8 +63,11 @@ const ProjectCard = ({ project, className = "" }) => (
       ))}
     </div>
 
-    <div className="project-card-media">
-      <img src={project.image} alt={project.title} />
+    <div className={`project-card-media${project.lightImage ? " has-light" : ""}`}>
+      <img src={project.image} alt={project.title} className="project-banner-dark" />
+      {project.lightImage && (
+        <img src={project.lightImage} alt={project.title} className="project-banner-light" />
+      )}
     </div>
   </a>
 );
@@ -172,14 +176,17 @@ export const Home = () => {
               ))}
             </nav>
 
-            <button
-              type="button"
-              className="hamburger-menu-wrapper"
-              aria-label={menuOpen ? "Close menu" : "Open menu"}
-              onClick={() => setMenuOpen((prev) => !prev)}
-            >
-              <Menu size={28} />
-            </button>
+            <div className="header-actions">
+              <ThemeToggle />
+              <button
+                type="button"
+                className="hamburger-menu-wrapper mobile-only"
+                aria-label={menuOpen ? "Close menu" : "Open menu"}
+                onClick={() => setMenuOpen((prev) => !prev)}
+              >
+                <Menu size={28} />
+              </button>
+            </div>
           </div>
         </div>
 
@@ -209,7 +216,16 @@ export const Home = () => {
                     <div className="hero-bio-row">
                       <div className="hero-portrait-frame">
                         <div className="hero-portrait-glow" />
-                        <img src="/portrait.jpg" alt="Kaung Khant Hein" className="hero-inline-portrait-image" />
+                        <img
+                          src="/portrait.jpg"
+                          alt="Kaung Khant Hein"
+                          className="hero-inline-portrait-image portrait-dark"
+                        />
+                        <img
+                          src="/portrait-white.png"
+                          alt="Kaung Khant Hein"
+                          className="hero-inline-portrait-image portrait-light"
+                        />
                       </div>
                       <div className="hero-bio-text">
                         <p className="hero-subtitle">{hero.subtitle}</p>

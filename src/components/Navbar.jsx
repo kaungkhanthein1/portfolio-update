@@ -20,7 +20,7 @@ export const Navbar = () => {
         backdropFilter: "blur(12px)",
         WebkitBackdropFilter: "blur(12px)",
         borderBottom: "1px solid var(--border-subtle)",
-        background: "rgba(14, 14, 16, 0.85)",
+        background: "var(--header-bg)",
       }}
     >
       <div className="container flex items-center justify-between h-16">
@@ -65,7 +65,7 @@ export const Navbar = () => {
               : "opacity-0 pointer-events-none"
           )}
           style={{
-            background: "rgba(14, 14, 16, 0.98)",
+            background: "var(--nav-bg-mobile)",
             backdropFilter: "blur(20px)",
           }}
         >

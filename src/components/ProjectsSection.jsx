@@ -13,6 +13,7 @@ const projects = [
     title: "NextBite — Multi-Tenant QSR Platform",
     brand: { name: "NextBite", description: "Multi-tenant QSR platform", icon: <ShoppingBag size={20} /> },
     image: "/projects/NextBiteBanner.jpg",
+    lightImage: "/projects/NextBiteBanenrWhite.jpg",
     tags: ["React Native", "Expo", "Go", "TypeScript"],
     categories: ["React Native", "Go"],
     demoUrl: "#",
@@ -24,6 +25,7 @@ const projects = [
     title: "Zawgyi Mythic Run — Multiplayer Browser Game",
     brand: { name: "Zawgyi", description: "Multiplayer browser game", icon: <Swords size={20} /> },
     image: "/projects/ZawgyiBanner.png",
+    lightImage: "/projects/ZawgyiBannerWhite.jpg",
     tags: ["Phaser 3", "Babylon.js", "Socket.IO", "Node.js"],
     categories: ["Phaser 3", "Babylon.js"],
     demoUrl: "#",
@@ -35,6 +37,7 @@ const projects = [
     title: "Veteran Tour Guide App",
     brand: { name: "Veteran", description: "Tourist experience platform", icon: <Map size={20} /> },
     image: "/projects/VeteranBanner.png",
+    lightImage: "/projects/VeteranBannerWhite.jpg",
     tags: ["React", "Redux Toolkit", "TailwindCSS", "Zustand"],
     categories: ["React", "Redux Toolkit"],
     demoUrl: "https://vd-demo-11.netlify.app/",
@@ -46,6 +49,7 @@ const projects = [
     title: "AppleThings — Full-Stack E-Commerce App",
     brand: { name: "AppleThings", description: "Full-stack e-commerce app", icon: <Code size={20} /> },
     image: "/projects/AppleThingsBanner.jpg",
+    lightImage: "/projects/AppleThingsBannerWhite.jpg",
     tags: ["React Native", "TypeScript", "Medusa.js", "PostgreSQL"],
     categories: ["React Native", "Medusa.js"],
     demoUrl: "#",
@@ -138,8 +142,11 @@ export const ProjectsSection = () => {
                 </div>
 
                 {/* Overlapping Media at Bottom */}
-                <div className="project-card-media">
-                  <img src={project.image} alt={project.title} />
+                <div className={`project-card-media${project.lightImage ? " has-light" : ""}`}>
+                  <img src={project.image} alt={project.title} className="project-banner-dark" />
+                  {project.lightImage && (
+                    <img src={project.lightImage} alt={project.title} className="project-banner-light" />
+                  )}
                 </div>
               </div>
             ))}
