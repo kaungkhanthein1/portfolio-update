@@ -423,7 +423,8 @@ export const Home = () => {
         <div className="container-default">
           <div className="footer-top">
             <div className="footer-brand">
-              <img src="/public/portrait.jpg" alt="Kaung Khant Hein" className="footer-avatar" />
+              <img src="/portrait.jpg" alt="Kaung Khant Hein" className="footer-avatar footer-avatar-dark" />
+              <img src="/portrait-white.png" alt="Kaung Khant Hein" className="footer-avatar footer-avatar-light" />
               <div>
                 <h3>Kaung Khant Hein</h3>
                 <p>Full-Stack Mobile & Web Engineer</p>

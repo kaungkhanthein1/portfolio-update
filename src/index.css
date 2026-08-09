@@ -1045,6 +1045,18 @@
   flex-shrink: 0;
 }
 
+.footer-avatar-light {
+  display: none;
+}
+
+:root:not(.dark) .footer-avatar-dark {
+  display: none;
+}
+
+:root:not(.dark) .footer-avatar-light {
+  display: block;
+}
+
 .footer-brand h3 {
   color: var(--text-primary);
   font-size: 20px;
