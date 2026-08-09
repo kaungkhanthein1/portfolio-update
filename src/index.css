@@ -325,7 +325,8 @@
 .btn-primary {
   color: #1b1f24;
   background: rgba(255, 255, 255, 0.9);
-  border: 0;
+  border: 1px solid #e4e7ec;
+  box-shadow: var(--shadow-soft);
 }
 
 .btn-primary:hover {
