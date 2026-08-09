@@ -91,7 +91,7 @@ export const projects = [
       { label: "Medusa.js", color: "blue" },
     ],
     icon: <Code size={24} />,
-    href: "https://github.com/kaungkhanthein1/techzy",
+    href: "https://ap-things-12321.netlify.app/",
   },
   {
     title: "Veteran Tour Guide App",

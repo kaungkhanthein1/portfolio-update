@@ -53,7 +53,7 @@ const projects = [
     tags: ["React Native", "TypeScript", "Medusa.js", "PostgreSQL"],
     categories: ["React Native", "Medusa.js"],
     demoUrl: "#",
-    githubUrl: "https://github.com/kaungkhanthein1/techzy",
+    githubUrl: "https://ap-things-12321.netlify.app/",
     description: "An end-to-end mobile e-commerce platform built with an AI-powered SDLC.",
   },
   
