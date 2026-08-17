@@ -16,8 +16,8 @@ const projects = [
     lightImage: "/projects/NextBiteBanenrWhite.jpg",
     tags: ["React Native", "Expo", "Go", "TypeScript"],
     categories: ["React Native", "Go"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/kaungkhanthein1/nextbite",
+    demoUrl: "https://next-bite.netlify.app/",
+    githubUrl: "https://next-bite.netlify.app/",
     description: "A white-label Quick Service Restaurant platform built for scalability across multiple restaurant brands.",
   },
   {

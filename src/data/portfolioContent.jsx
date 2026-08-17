@@ -61,7 +61,7 @@ export const projects = [
       { label: "React Native", color: "blue" },
     ],
     icon: <ShoppingBag size={24} />,
-    href: "https://github.com/kaungkhanthein1/nextbite",
+    href: "https://next-bite.netlify.app/",
   },
   {
     title: "Zawgyi Mythic Run",
