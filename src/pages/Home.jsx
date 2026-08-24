@@ -64,7 +64,11 @@ const ProjectCard = ({ project, className = "" }) => (
     </div>
 
     <div className={`project-card-media${project.lightImage ? " has-light" : ""}`}>
-      <img src={project.image} alt={project.title} className="project-banner-dark" />
+      {project.video ? (
+        <video src={project.video} autoPlay loop muted playsInline className="project-banner-dark" />
+      ) : (
+        <img src={project.image} alt={project.title} className="project-banner-dark" />
+      )}
       {project.lightImage && (
         <img src={project.lightImage} alt={project.title} className="project-banner-light" />
       )}

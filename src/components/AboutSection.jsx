@@ -93,7 +93,7 @@ export const AboutSection = () => {
               <a href="#contact" className="btn-primary">
                 Get In Touch
               </a>
-              <a href="/kkh_cv.pdf" download="kkh_cv.pdf" className="btn-outline">
+              <a href="/Kaung_Khant_Hein_Resume.pdf" download="Kaung_Khant_Hein_Resume.pdf" className="btn-outline">
                 Download CV
               </a>
             </div>

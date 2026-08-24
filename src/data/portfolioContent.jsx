@@ -5,6 +5,7 @@ import {
   ShoppingBag,
   Map,
   Code,
+  Package,
 } from "lucide-react";
 
 export const navItems = [
@@ -48,6 +49,20 @@ export const capabilityCards = [
 ];
 
 export const projects = [
+  {
+    title: "react-native-liquid-pill-tabbar",
+    role: "React Native glass UI kit",
+    description:
+      "A React Native component kit with an Apple Liquid Glass-inspired feel — translucent surfaces, animated pill motion, zero native modules. Works on iOS, Android, and web.",
+    video: "/projects/package_demo.mov",
+    tags: ["React Native", "TypeScript", "npm", "Expo"],
+    categories: [
+      { label: "React Native", color: "blue" },
+      { label: "npm", color: "gray" },
+    ],
+    icon: <Package size={24} />,
+    href: "https://www.npmjs.com/package/react-native-liquid-pill-tabbar",
+  },
   {
     title: "NextBite",
     role: "Multi-tenant QSR platform",
@@ -108,20 +123,20 @@ export const projects = [
     icon: <Map size={24} />,
     href: "https://veteran-driver.netlify.app/",
   },
-  {
-    title: "Personal Developer Portfolio",
-    role: "Portfolio system",
-    description:
-      "A space-themed interactive portfolio showcasing skills, experience, and projects. It is built with React and Tailwind and customized with responsive layouts and animated elements.",
-    image: "/projects/PortfolioBanner.png",
-    tags: ["React", "TailwindCSS", "Framer Motion"],
-    categories: [
-      { label: "React", color: "gray" },
-      { label: "TailwindCSS", color: "gray" },
-    ],
-    icon: <CodeXml size={24} />,
-    href: "https://github.com/kaungkhanthein1/portfolio",
-  },
+  // {
+  //   title: "Personal Developer Portfolio",
+  //   role: "Portfolio system",
+  //   description:
+  //     "A space-themed interactive portfolio showcasing skills, experience, and projects. It is built with React and Tailwind and customized with responsive layouts and animated elements.",
+  //   image: "/projects/PortfolioBanner.png",
+  //   tags: ["React", "TailwindCSS", "Framer Motion"],
+  //   categories: [
+  //     { label: "React", color: "gray" },
+  //     { label: "TailwindCSS", color: "gray" },
+  //   ],
+  //   icon: <CodeXml size={24} />,
+  //   href: "https://github.com/kaungkhanthein1/portfolio",
+  // },
 ];
 
 export const utilityBlocks = [
