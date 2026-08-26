@@ -5,9 +5,23 @@ import {
   ShoppingBag,
   Map,
   Code,
+  Package,
 } from "lucide-react";
 
 const projects = [
+  {
+    id: 6,
+    title: "react-native-liquid-pill-tabbar",
+    brand: { name: "Liquid Pill Tabbar", description: "React Native glass UI kit", icon: <Package size={20} /> },
+    video: "/projects/package_demo.mov",
+    tags: ["React Native", "TypeScript", "npm", "Expo"],
+    categories: ["React Native", "npm"],
+    demoUrl: "#",
+    githubUrl: "https://www.npmjs.com/package/react-native-liquid-pill-tabbar",
+    description: "A React Native component kit with an Apple Liquid Glass-inspired feel — translucent surfaces, animated pill motion, zero native modules.",
+    ctaLabel: "View npm package →",
+    ctaUrl: "https://www.npmjs.com/package/react-native-liquid-pill-tabbar",
+  },
   {
     id: 1,
     title: "NextBite — Multi-Tenant QSR Platform",
@@ -19,6 +33,8 @@ const projects = [
     demoUrl: "https://next-bite.netlify.app/",
     githubUrl: "https://next-bite.netlify.app/",
     description: "A white-label Quick Service Restaurant platform built for scalability across multiple restaurant brands.",
+    ctaLabel: "Explore live project →",
+    ctaUrl: "https://next-bite.netlify.app/",
   },
   {
     id: 3,
@@ -31,6 +47,8 @@ const projects = [
     demoUrl: "#",
     githubUrl: "https://zawgyigame.onrender.com/",
     description: "A 2D/3D side-scrolling multiplayer game featuring a Myanmar alchemist with Levitate, Staff Strike, and Alchemic Pill abilities.",
+    ctaLabel: "Explore live project →",
+    ctaUrl: "https://zawgyigame.onrender.com/",
   },
   {
     id: 4,
@@ -43,6 +61,8 @@ const projects = [
     demoUrl: "https://vd-demo-11.netlify.app/",
     githubUrl: "https://github.com/kaungkhanthein1/veteran-driver-v1",
     description: "A multilingual Southeast Asia tourists web app.",
+    ctaLabel: "Explore live project →",
+    ctaUrl: "https://vd-demo-11.netlify.app/",
   },
   {
     id: 2,
@@ -55,8 +75,9 @@ const projects = [
     demoUrl: "#",
     githubUrl: "https://ap-things-12321.netlify.app/",
     description: "An end-to-end mobile e-commerce platform built with an AI-powered SDLC.",
+    ctaLabel: "Explore live project →",
+    ctaUrl: "https://ap-things-12321.netlify.app/",
   },
-  
   {
     id: 5,
     title: "Personal Developer Portfolio",
@@ -67,6 +88,8 @@ const projects = [
     demoUrl: "#",
     githubUrl: "https://github.com/kaungkhanthein1/portfolio",
     description: "A space-themed interactive portfolio showcasing skills, experience, and projects.",
+    ctaLabel: "View project →",
+    ctaUrl: "https://github.com/kaungkhanthein1/portfolio",
   },
 ];
 
@@ -136,18 +159,35 @@ export const ProjectsSection = () => {
                       </span>
                     ))}
                   </div>
-                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="project-card-link">
-                    View project <ArrowRight size={18} />
+                </div>
+
+                {/* CTA Link */}
+                <div className="project-card-cta">
+                  <a
+                    href={project.ctaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-card-cta-link"
+                    aria-label={project.ctaLabel}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {project.ctaLabel}
                   </a>
                 </div>
 
                 {/* Overlapping Media at Bottom */}
-                <div className={`project-card-media${project.lightImage ? " has-light" : ""}`}>
-                  <img src={project.image} alt={project.title} className="project-banner-dark" />
-                  {project.lightImage && (
-                    <img src={project.lightImage} alt={project.title} className="project-banner-light" />
-                  )}
-                </div>
+                {project.video ? (
+                  <div className="project-card-media">
+                    <video src={project.video} autoPlay muted loop playsInline />
+                  </div>
+                ) : (
+                  <div className={`project-card-media${project.lightImage ? " has-light" : ""}`}>
+                    <img src={project.image} alt={project.title} className="project-banner-dark" />
+                    {project.lightImage && (
+                      <img src={project.lightImage} alt={project.title} className="project-banner-light" />
+                    )}
+                  </div>
+                )}
               </div>
             ))}
           </div>

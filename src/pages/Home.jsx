@@ -55,12 +55,19 @@ const ProjectCard = ({ project, className = "" }) => (
     <h3 className="project-card-title">{project.title}</h3>
     <p className="project-card-description">{project.description}</p>
 
-    <div className="project-card-tags">
-      {project.tags.map((tag) => (
-        <span key={tag} className="tag-badge">
-          {tag}
+    <div className="project-card-footer-row">
+      <div className="project-card-tags">
+        {project.tags.map((tag) => (
+          <span key={tag} className="tag-badge">
+            {tag}
+          </span>
+        ))}
+      </div>
+      {project.ctaLabel && (
+        <span className="project-card-cta-link" aria-hidden="true">
+          {project.ctaLabel}
         </span>
-      ))}
+      )}
     </div>
 
     <div className={`project-card-media${project.lightImage ? " has-light" : ""}`}>

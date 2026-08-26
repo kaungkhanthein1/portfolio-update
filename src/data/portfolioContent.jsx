@@ -62,6 +62,8 @@ export const projects = [
     ],
     icon: <Package size={24} />,
     href: "https://www.npmjs.com/package/react-native-liquid-pill-tabbar",
+    ctaLabel: "View npm package →",
+    ctaUrl: "https://www.npmjs.com/package/react-native-liquid-pill-tabbar",
   },
   {
     title: "NextBite",
@@ -77,6 +79,8 @@ export const projects = [
     ],
     icon: <ShoppingBag size={24} />,
     href: "https://next-bite.netlify.app/",
+    ctaLabel: "Explore live project →",
+    ctaUrl: "https://next-bite.netlify.app/",
   },
   {
     title: "Zawgyi Mythic Run",
@@ -92,6 +96,8 @@ export const projects = [
     ],
     icon: <Swords size={24} />,
     href: "https://zawgyigame.onrender.com/",
+    ctaLabel: "Explore live project →",
+    ctaUrl: "https://zawgyigame.onrender.com/",
   },
   {
     title: "AppleThings",
@@ -107,6 +113,8 @@ export const projects = [
     ],
     icon: <Code size={24} />,
     href: "https://ap-things-12321.netlify.app/",
+    ctaLabel: "Explore live project →",
+    ctaUrl: "https://ap-things-12321.netlify.app/",
   },
   {
     title: "Veteran Tour Guide App",
@@ -122,6 +130,8 @@ export const projects = [
     ],
     icon: <Map size={24} />,
     href: "https://veteran-driver.netlify.app/",
+    ctaLabel: "Explore live project →",
+    ctaUrl: "https://veteran-driver.netlify.app/",
   },
   // {
   //   title: "Personal Developer Portfolio",
@@ -136,6 +146,8 @@ export const projects = [
   //   ],
   //   icon: <CodeXml size={24} />,
   //   href: "https://github.com/kaungkhanthein1/portfolio",
+  //   ctaLabel: "View project →",
+  //   ctaUrl: "https://github.com/kaungkhanthein1/portfolio",
   // },
 ];
 

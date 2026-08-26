@@ -655,26 +655,28 @@
   will-change: transform;
 }
 
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
-}
+@media (min-width: 768px) {
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
+  }
 
-.project-card:active {
-  transform: scale(0.98);
-}
+  .project-card:active {
+    transform: scale(0.98);
+  }
 
-.portfolio-staggered:hover .project-card,
-.pages-grid:hover .project-card {
-  opacity: 0.35;
-  transition: opacity 0.4s ease, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 0.45s ease;
-}
+  .portfolio-staggered:hover .project-card,
+  .pages-grid:hover .project-card {
+    opacity: 0.35;
+    transition: opacity 0.4s ease, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.45s ease;
+  }
 
-.portfolio-staggered:hover .project-card:hover,
-.pages-grid:hover .project-card:hover {
-  opacity: 1;
+  .portfolio-staggered:hover .project-card:hover,
+  .pages-grid:hover .project-card:hover {
+    opacity: 1;
+  }
 }
 
 .project-card-categories {
@@ -705,8 +707,10 @@
   background: var(--veil-strong);
 }
 
-.project-card:hover .project-card-category-pill {
-  transform: translateY(-1px);
+@media (min-width: 768px) {
+  .project-card:hover .project-card-category-pill {
+    transform: translateY(-1px);
+  }
 }
 
 .project-card-brand {
@@ -729,9 +733,11 @@
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.project-card:hover .project-card-brand-icon {
-  background: var(--line-medium);
-  transform: scale(1.05);
+@media (min-width: 768px) {
+  .project-card:hover .project-card-brand-icon {
+    background: var(--line-medium);
+    transform: scale(1.05);
+  }
 }
 
 .project-card-brand-name {
@@ -764,6 +770,51 @@
   padding-bottom: 8px;
   position: relative;
   z-index: 10;
+}
+
+.project-card-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  position: relative;
+  z-index: 10;
+  padding-bottom: 6px;
+}
+
+.project-card-footer-row .project-card-tags {
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+.project-card-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  color: var(--accent-primary);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.project-card-cta-link:hover {
+  color: var(--accent-hover);
+  gap: 10px;
+}
+
+.project-card-cta-link:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+@media (max-width: 767px) {
+  .project-card-footer-row {
+    flex-wrap: wrap;
+  }
 }
 
 .project-card-media-3d {
@@ -911,9 +962,11 @@
   display: block;
 }
 
-.project-card:hover .project-card-media img,
-.project-card:hover .project-card-media video {
-  transform: scale(1.02);
+@media (min-width: 768px) {
+  .project-card:hover .project-card-media img,
+  .project-card:hover .project-card-media video {
+    transform: scale(1.02);
+  }
 }
 
 .tag-badge {
@@ -1991,20 +2044,28 @@
   }
 
   .utility-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-columns: 1fr;
     gap: 12px;
   }
 
   .utility-card {
-    padding: 16px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    box-shadow: none;
   }
 
   .utility-card h3 {
-    font-size: 18px;
+    font-size: 16px;
+    margin-bottom: 6px;
   }
 
   .utility-card p {
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .capability-strip {
+    margin-top: 20px;
   }
 
   .social-icon {
