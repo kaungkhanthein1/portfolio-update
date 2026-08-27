@@ -54,7 +54,7 @@ export const projects = [
     role: "React Native glass UI kit",
     description:
       "A React Native component kit with an Apple Liquid Glass-inspired feel — translucent surfaces, animated pill motion, zero native modules. Works on iOS, Android, and web.",
-    video: "/projects/package_demo.mov",
+    video: "/projects/package_demo.mp4",
     tags: ["React Native", "TypeScript", "npm", "Expo"],
     categories: [
       { label: "React Native", color: "blue" },
