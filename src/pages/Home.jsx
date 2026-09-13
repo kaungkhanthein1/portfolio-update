@@ -228,12 +228,12 @@ export const Home = () => {
                       <div className="hero-portrait-frame">
                         <div className="hero-portrait-glow" />
                         <img
-                          src="/portrait.jpg"
+                          src="/KKH.jpg"
                           alt="Kaung Khant Hein"
                           className="hero-inline-portrait-image portrait-dark"
                         />
                         <img
-                          src="/portrait-white.png"
+                          src="/KKH.jpg"
                           alt="Kaung Khant Hein"
                           className="hero-inline-portrait-image portrait-light"
                         />
@@ -330,27 +330,49 @@ export const Home = () => {
 
         <section id="portfolio" className="section pd-120px bg-neutral-700">
           <div className="container-default">
-            <div className="portfolio-staggered">
+            <div className="portfolio-staggered portfolio-desktop-only">
               <div className="portfolio-col-left">
                 <div className="portfolio-intro">
                   <p className="section-eyebrow portfolio-eyebrow">
                     <span style={{ color: "var(--accent-primary)" }}>/ </span>MY PORTFOLIO
                   </p>
                   <h2 className="portfolio-intro-title">Take a look at the latest projects I&apos;ve done</h2>
-                  <a className="portfolio-browse-link" href="#contact" style={{ borderBottom: "2px solid var(--text-primary)", paddingBottom: "2px" }}>
+                  <a className="portfolio-browse-link" href="#portfolio" style={{ borderBottom: "2px solid var(--text-primary)", paddingBottom: "2px" }}>
                     Browse all projects <ArrowRight size={24} />
                   </a>
                 </div>
 
                 <ProjectCard project={pageCards[0]} />
                 {pageCards[3] && <ProjectCard project={pageCards[3]} />}
+                {pageCards[5] && <ProjectCard project={pageCards[5]} />}
               </div>
 
               <div className="portfolio-col-right">
                 {pageCards[1] && <ProjectCard project={pageCards[1]} />}
                 {pageCards[2] && <ProjectCard project={pageCards[2]} />}
                 {pageCards[4] && <ProjectCard project={pageCards[4]} />}
+                {pageCards[6] && <ProjectCard project={pageCards[6]} />}
               </div>
+            </div>
+
+            <div className="portfolio-mobile-only">
+              <div className="portfolio-intro">
+                <p className="section-eyebrow portfolio-eyebrow">
+                  <span style={{ color: "var(--accent-primary)" }}>/ </span>MY PORTFOLIO
+                </p>
+                <h2 className="portfolio-intro-title">Take a look at the latest projects I&apos;ve done</h2>
+                <a className="portfolio-browse-link" href="#portfolio" style={{ borderBottom: "2px solid var(--text-primary)", paddingBottom: "2px" }}>
+                  Browse all projects <ArrowRight size={24} />
+                </a>
+              </div>
+
+              <ProjectCard project={pageCards[1]} />
+              {pageCards[2] && <ProjectCard project={pageCards[2]} />}
+              {pageCards[3] && <ProjectCard project={pageCards[3]} />}
+              {pageCards[4] && <ProjectCard project={pageCards[4]} />}
+              {pageCards[0] && <ProjectCard project={pageCards[0]} />}
+              {pageCards[5] && <ProjectCard project={pageCards[5]} />}
+              {pageCards[6] && <ProjectCard project={pageCards[6]} />}
             </div>
           </div>
         </section>
@@ -434,8 +456,8 @@ export const Home = () => {
         <div className="container-default">
           <div className="footer-top">
             <div className="footer-brand">
-              <img src="/portrait.jpg" alt="Kaung Khant Hein" className="footer-avatar footer-avatar-dark" />
-              <img src="/portrait-white.png" alt="Kaung Khant Hein" className="footer-avatar footer-avatar-light" />
+              <img src="/KKH.jpg" alt="Kaung Khant Hein" className="footer-avatar footer-avatar-dark" />
+              <img src="/KKH.jpg" alt="Kaung Khant Hein" className="footer-avatar footer-avatar-light" />
               <div>
                 <h3>Kaung Khant Hein</h3>
                 <p>Full-Stack Mobile & Web Engineer</p>

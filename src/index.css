@@ -586,6 +586,14 @@
   gap: 24px;
 }
 
+.portfolio-desktop-only {
+  display: grid;
+}
+
+.portfolio-mobile-only {
+  display: none;
+}
+
 .portfolio-intro {
   position: sticky;
   top: 120px;
@@ -1383,17 +1391,17 @@
 
 .hero-bio-row {
   display: flex;
-  align-items: flex-start;
-  gap: 28px;
+  align-items: center;
+  gap: 32px;
   margin-top: 28px;
 }
 
 .hero-portrait-frame {
   flex-shrink: 0;
   position: relative;
-  width: 150px;
-  height: 172px;
-  margin-top: -12px;
+  width: 200px;
+  height: 220px;
+  margin-top: 0;
   border-radius: 18px;
   overflow: hidden;
   background: transparent;
@@ -1412,7 +1420,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 12%;
+  object-position: 50% 20%;
   border-radius: 0;
   filter: saturate(0.94) contrast(1.02);
   transition: filter 0.3s ease;
@@ -1770,6 +1778,20 @@
   .cta-grid,
   .footer-top {
     grid-template-columns: 1fr;
+  }
+
+  .portfolio-desktop-only {
+    display: none;
+  }
+
+  .portfolio-mobile-only {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .portfolio-mobile-only .portfolio-intro {
+    position: static;
   }
 
   .project-card {
