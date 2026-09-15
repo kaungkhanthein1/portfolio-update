@@ -2034,6 +2034,11 @@
     margin-bottom: -10px;
   }
 
+  .project-card-media video {
+    object-fit: cover;
+    object-position: center center;
+  }
+
   .project-card-title {
     font-size: 22px;
   }
