@@ -96,9 +96,9 @@ export const projects = [
       { label: "React Native", color: "blue" },
     ],
     icon: <ShoppingBag size={24} />,
-    href: "https://next-bite.netlify.app/",
+    href: "https://mingalar-menu.netlify.app/",
     ctaLabel: "Explore live project →",
-    ctaUrl: "https://next-bite.netlify.app/",
+    ctaUrl: "https://mingalar-menu.netlify.app/",
   },
   {
     title: "AppleThings",
